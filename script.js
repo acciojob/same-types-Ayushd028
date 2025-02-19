@@ -1,9 +1,8 @@
 function isSameType(value1, value2) {
-    // Convert valid numbers from string to number
-    let num1 = isNaN(value1) || value1 === "NaN" ? value1 : Number(value1);
-    let num2 = isNaN(value2) || value2 === "NaN" ? value2 : Number(value2);
-
-    return typeof num1 === typeof num2;
+  if (Number.isNaN(value1) && Number.isNaN(value2)) {
+    return true;
+  }
+  return typeof value1 === typeof value2;
 }
 
 // Do not change the code below
